@@ -34,6 +34,9 @@ export default {
         auxiliary: "#003c82",
         current: 'currentColor',
       },
+      backgroundImage:{
+        'arrow':"url('./icons.svg#icon-arrow')",
+      },
     },
   },
   plugins: [],
