@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{css,js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{css,js,ts,jsx,tsx}","./icons.svg"],
   theme: {
     extend: {
       container: {
@@ -33,10 +33,12 @@ export default {
       colors: {
         auxiliary: "#003c82",
         current: 'currentColor',
+        customBlue: 'rgba(0, 60, 130, 0.3)',
       },
       backgroundImage:{
         'arrow':"url('./icons.svg#icon-arrow')",
       },
+      
     },
   },
   plugins: [],
