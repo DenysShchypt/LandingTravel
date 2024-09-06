@@ -1,6 +1,11 @@
-
 import { useSelect } from "downshift";
 import { FC } from "react";
+import { ISelectItem } from "../../../../../types";
+
+interface IFilterLocationProps {
+  handleSelect: (selectItem:ISelectItem|null, selectName:string)=>void
+
+}
 
 const items = [
   { value: "US", label: "United States" },
@@ -9,7 +14,9 @@ const items = [
   { value: "DE", label: "Germany" },
 ];
 
-const FilterLocation:FC = ():JSX.Element => {
+const FilterLocation: FC<IFilterLocationProps> = ({
+  handleSelect
+}): JSX.Element => {
   const {
     isOpen,
     getToggleButtonProps,
@@ -21,12 +28,12 @@ const FilterLocation:FC = ():JSX.Element => {
     items,
     itemToString: (item) => (item ? item.label : ""),
     onSelectedItemChange: ({ selectedItem }) => {
-      console.log("Selected Item:", selectedItem);
+      handleSelect(selectedItem,"location")
     },
   });
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         type="button"
         {...getToggleButtonProps()}
@@ -37,17 +44,18 @@ const FilterLocation:FC = ():JSX.Element => {
           className=" stroke-black ml-2.5 stroke-1 fill-white transition-transform duration-300"
           width="16"
           height="10"
-          style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           <use href="../../../../../../icons.svg#icon-arrow"></use>
         </svg>
       </button>
-      {isOpen && (
-        <ul
-          {...getMenuProps()}
-          className="absolute w-full bg-white border border-slate-200 mt-1 rounded-md shadow-lg"
-        >
-          {items.map((item, index) => (
+
+      <ul
+        {...getMenuProps()}
+        className="absolute border-0 w-full bg-white  border-slate-200 mt-1 rounded-md shadow-lg"
+      >
+        {isOpen &&
+          items.map((item, index) => (
             <li
               {...getItemProps({ item, index })}
               key={item.value}
@@ -58,11 +66,9 @@ const FilterLocation:FC = ():JSX.Element => {
               {item.label}
             </li>
           ))}
-        </ul>
-      )}
+      </ul>
     </div>
   );
 };
 
 export default FilterLocation;
-

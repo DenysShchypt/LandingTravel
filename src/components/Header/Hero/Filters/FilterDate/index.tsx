@@ -1,5 +1,11 @@
 import { useSelect } from "downshift";
 import { FC } from "react";
+import { ISelectItem } from "../../../../../types";
+
+interface IFilterDateProps {
+  handleSelect: (selectItem:ISelectItem|null, selectName:string)=>void
+
+}
 
 const items = [
   { value: "US", label: "United States" },
@@ -8,7 +14,7 @@ const items = [
   { value: "DE", label: "Germany" },
 ];
 
-const FilterDate:FC = ():JSX.Element => {
+const FilterDate:FC<IFilterDateProps> = ({handleSelect}):JSX.Element => {
   const {
     isOpen,
     getToggleButtonProps,
@@ -20,7 +26,7 @@ const FilterDate:FC = ():JSX.Element => {
     items,
     itemToString: (item) => (item ? item.label : ""),
     onSelectedItemChange: ({ selectedItem }) => {
-      console.log("Selected Item:", selectedItem);
+      handleSelect(selectedItem,"date")
     },
   });
 
@@ -41,12 +47,12 @@ const FilterDate:FC = ():JSX.Element => {
           <use href="../../../../../../icons.svg#icon-arrow"></use>
         </svg>
       </button>
-      {isOpen && (
+
         <ul
           {...getMenuProps()}
           className="absolute w-full bg-white border border-slate-200 mt-1 rounded-md shadow-lg"
         >
-          {items.map((item, index) => (
+          {isOpen && items.map((item, index) => (
             <li
               {...getItemProps({ item, index })}
               key={item.value}
@@ -58,7 +64,6 @@ const FilterDate:FC = ():JSX.Element => {
             </li>
           ))}
         </ul>
-      )}
     </div>
   );
 }
