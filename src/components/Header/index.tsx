@@ -3,6 +3,7 @@ import bgHeader from "../../assets/generalImg.jpg";
 import Navigate from "./Navigate";
 import Hero from "./Hero";
 
+
 const Header: FC = (): JSX.Element => {
   const styles = {
     backgroundImage: `url(${bgHeader})`,
@@ -10,6 +11,8 @@ const Header: FC = (): JSX.Element => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
+
+  
   return (
     <header
       className="h-screen w-screen bg-#003C82 text-white flex"

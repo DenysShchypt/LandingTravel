@@ -3,8 +3,9 @@ import { FC } from "react";
 import { ISelectItem } from "../../../../../types";
 
 interface IFilterDateProps {
-  handleSelect: (selectItem:ISelectItem|null, selectName:string)=>void
-
+  handleSelect: (selectItem: ISelectItem | null, selectName: string) => void;
+  handleOpenSelector: (selectName: string) => void;
+  isMdOrLarger: boolean;
 }
 
 const items = [
@@ -14,7 +15,11 @@ const items = [
   { value: "DE", label: "Germany" },
 ];
 
-const FilterDate:FC<IFilterDateProps> = ({handleSelect}):JSX.Element => {
+const FilterDate: FC<IFilterDateProps> = ({
+  handleSelect,
+  handleOpenSelector,
+  isMdOrLarger,
+}): JSX.Element => {
   const {
     isOpen,
     getToggleButtonProps,
@@ -26,33 +31,35 @@ const FilterDate:FC<IFilterDateProps> = ({handleSelect}):JSX.Element => {
     items,
     itemToString: (item) => (item ? item.label : ""),
     onSelectedItemChange: ({ selectedItem }) => {
-      handleSelect(selectedItem,"date")
+      handleSelect(selectedItem, "date");
     },
   });
 
   return (
-    <div className="relative">
+    <div className="relative" onClick={() => handleOpenSelector("location")}>
       <button
         type="button"
         {...getToggleButtonProps()}
-        className="appearance-none font-medium  text-xl w-[138px] py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-center "
+        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[138px] py-5 md:py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center"
       >
         {selectedItem ? selectedItem.label : "Date"}
         <svg
-          className=" stroke-black ml-2.5 stroke-1 fill-white transition-transform duration-300"
+          className=" stroke-black  ml-[220px] md:ml-2.5 stroke-1 fill-white transition-transform duration-300"
           width="16"
           height="10"
-          style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
+          style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
           <use href="../../../../../../icons.svg#icon-arrow"></use>
         </svg>
       </button>
 
-        <ul
-          {...getMenuProps()}
-          className="absolute w-full bg-white border border-slate-200 mt-1 rounded-md shadow-lg"
-        >
-          {isOpen && items.map((item, index) => (
+      <ul
+        {...getMenuProps()}
+        className="absolute w-full bg-white border-0 border-slate-200 mt-2 rounded-[20px] shadow-lg"
+      >
+        {isMdOrLarger &&
+          isOpen &&
+          items.map((item, index) => (
             <li
               {...getItemProps({ item, index })}
               key={item.value}
@@ -63,9 +70,9 @@ const FilterDate:FC<IFilterDateProps> = ({handleSelect}):JSX.Element => {
               {item.label}
             </li>
           ))}
-        </ul>
+      </ul>
     </div>
   );
-}
+};
 
-export default FilterDate
+export default FilterDate;

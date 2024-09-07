@@ -3,8 +3,9 @@ import { FC } from "react";
 import { ISelectItem } from "../../../../../types";
 
 interface IFilterLocationProps {
-  handleSelect: (selectItem:ISelectItem|null, selectName:string)=>void
-
+  handleSelect: (selectItem: ISelectItem | null, selectName: string) => void;
+  handleOpenSelector: (selectName:string) => void;
+  isMdOrLarger: boolean;
 }
 
 const items = [
@@ -15,7 +16,9 @@ const items = [
 ];
 
 const FilterLocation: FC<IFilterLocationProps> = ({
-  handleSelect
+  handleSelect,
+  handleOpenSelector,
+  isMdOrLarger,
 }): JSX.Element => {
   const {
     isOpen,
@@ -28,20 +31,23 @@ const FilterLocation: FC<IFilterLocationProps> = ({
     items,
     itemToString: (item) => (item ? item.label : ""),
     onSelectedItemChange: ({ selectedItem }) => {
-      handleSelect(selectedItem,"location")
+      handleSelect(selectedItem, "location");
     },
   });
-
   return (
-    <div className="relative ">
+    <div className="relative " onClick={()=>
+      handleOpenSelector("location")
+      
+    }>
       <button
         type="button"
         {...getToggleButtonProps()}
-        className="appearance-none font-medium  text-xl w-[170px] py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-center "
+        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center
+        "
       >
         {selectedItem ? selectedItem.label : "Location"}
         <svg
-          className=" stroke-black ml-2.5 stroke-1 fill-white transition-transform duration-300"
+          className=" stroke-black  ml-[220px] md:ml-2.5 stroke-1 fill-white transition-transform duration-300"
           width="16"
           height="10"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
@@ -52,9 +58,10 @@ const FilterLocation: FC<IFilterLocationProps> = ({
 
       <ul
         {...getMenuProps()}
-        className="absolute border-0 w-full bg-white  border-slate-200 mt-1 rounded-md shadow-lg"
+        className="absolute border-0 w-full bg-white rounded-[20px] border-slate-200 mt-2  shadow-lg"
       >
-        {isOpen &&
+        {isMdOrLarger&&
+          isOpen &&
           items.map((item, index) => (
             <li
               {...getItemProps({ item, index })}
