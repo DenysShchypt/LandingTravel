@@ -36,7 +36,7 @@ const FilterLocation: FC<IFilterLocationProps> = ({
   });
   return (
     <div className="relative " onClick={()=>
-      handleOpenSelector("location")
+      handleOpenSelector("Location")
       
     }>
       <button

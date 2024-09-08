@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       container: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'], // або ваш кастомний шрифт
+        },
         padding: {
           xs: "1rem",
           sm: "1rem",
@@ -35,8 +38,8 @@ export default {
         current: 'currentColor',
         customBlue: 'rgba(0, 60, 130, 0.3)',
       },
-      backgroundImage:{
-        'arrow':"url('./icons.svg#icon-arrow')",
+      transitionProperty: {
+        'opacity-transform': 'opacity, transform',
       },
       
     },

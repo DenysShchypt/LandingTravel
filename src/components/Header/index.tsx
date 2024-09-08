@@ -2,7 +2,8 @@ import { FC } from "react";
 import bgHeader from "../../assets/generalImg.jpg";
 import Navigate from "./Navigate";
 import Hero from "./Hero";
-
+import { useAppSelector } from "../../utils/hooks";
+import FilterMobile from "./Hero/FilterMobile";
 
 const Header: FC = (): JSX.Element => {
   const styles = {
@@ -11,17 +12,25 @@ const Header: FC = (): JSX.Element => {
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
   };
+  const isOpenMobileSelect = useAppSelector(
+    (state) => state.select.isOpenMobileSelector
+  );
 
-  
   return (
     <header
       className="h-screen w-screen bg-#003C82 text-white flex"
       style={styles}
     >
-      <div className="container">
-        <Navigate />
-        <Hero />
-      </div>
+      {isOpenMobileSelect ? (
+
+          <FilterMobile />
+
+      ) : (
+        <div className="container">
+          <Navigate />
+          <Hero />
+        </div>
+      )}
     </header>
   );
 };

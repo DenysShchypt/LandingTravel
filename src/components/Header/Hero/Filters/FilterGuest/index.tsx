@@ -36,7 +36,7 @@ const FilterGuest: FC<IFilterGuestProps> = ({
   });
 
   return (
-    <div className="relative" onClick={() => handleOpenSelector("location")}>
+    <div className="relative" onClick={() => handleOpenSelector("Guest")}>
       <button
         type="button"
         {...getToggleButtonProps()}

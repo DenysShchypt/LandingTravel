@@ -10,14 +10,15 @@ const selectLocationSlice = createSlice({
   name: "selectLocation",
   initialState,
   reducers: {
-    toggleMobileSelector(state, action) {
-      state.isOpenMobileSelector = !state.isOpenMobileSelector;
+    openMobileSelector(state, action) {
+      state.selectName = action.payload.selectName;
+      state.isOpenMobileSelector = action.payload.isOpenMobileSelector;
     },
-    setSelectName(state, action) {
-      state.selectName = action.payload;
+    closeMobileSelector() {
+      return initialState;
     },
   },
 });
 
-export const { toggleMobileSelector, setSelectName } = selectLocationSlice.actions;
+export const { openMobileSelector,closeMobileSelector } = selectLocationSlice.actions;
 export const selectLocationSliceReducer = selectLocationSlice.reducer;

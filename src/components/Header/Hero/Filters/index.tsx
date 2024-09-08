@@ -5,12 +5,15 @@ import FilterDate from "./FilterDate";
 import FilterGuest from "./FilterGuest";
 import {
   ISelectItem,
-  ISelectItemOptions,
   ISelectValue,
 } from "../../../../types";
+import { useAppDispatch } from "../../../../utils/hooks";
+import { openMobileSelector } from "../../../../store/slice";
 
 
 const Filters: FC = (): JSX.Element => {
+
+  const dispatch = useAppDispatch()
   const isMdOrLarger = useMediaQuery({ minWidth: 768 });
 
   const [choseOfCountry, setChoseOfCountry] = useState<ISelectValue>({
@@ -19,17 +22,16 @@ const Filters: FC = (): JSX.Element => {
     guest: "",
   });
 
-  const [isOpenSelectorMobile, setIsOpenSelectorMobile] =
-    useState<ISelectItemOptions>({ isOpen: false, selectName: "" });
-
   const handleOpenSelector = (selectName: string) => {
     if (!isMdOrLarger) {
-      setIsOpenSelectorMobile((prev) => ({
-        isOpen: !prev.isOpen,
+      dispatch(openMobileSelector({
+        isOpenMobileSelector: true,
         selectName,
-      }));
+      }))
+
     }
   };
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log("Form Submitted with values:", choseOfCountry);

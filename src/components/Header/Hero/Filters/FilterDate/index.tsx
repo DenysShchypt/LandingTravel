@@ -36,7 +36,7 @@ const FilterDate: FC<IFilterDateProps> = ({
   });
 
   return (
-    <div className="relative" onClick={() => handleOpenSelector("location")}>
+    <div className="relative" onClick={() => handleOpenSelector("Date")}>
       <button
         type="button"
         {...getToggleButtonProps()}
