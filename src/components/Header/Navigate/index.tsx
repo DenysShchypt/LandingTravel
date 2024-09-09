@@ -1,6 +1,19 @@
 import { FC } from "react";
+import { useAppDispatch } from "../../../utils/hooks";
+import { openMobileSelector } from "../../../store/slice";
 
 const Navigate: FC = (): JSX.Element => {
+
+  const dispatch = useAppDispatch()
+
+  const handleOpenSelector = () => {
+
+      dispatch(openMobileSelector({
+        isOpenMobileSelector: true,
+        selectName:'',
+      }))
+
+  };
   return (
     <nav className="w-full flex justify-between mt-10 mb-24">
       <a href="../../../index.html" className="text-2xl font-bold mr-auto ">
@@ -20,8 +33,9 @@ const Navigate: FC = (): JSX.Element => {
           Reviews
         </li>
       </ul>
-      <button className="flex items-center justify-center w-12 h-12  md:hidden">
-        <svg className="fill-gray-100 stroke-slate-50 " width="48" height="48">
+      <button className="flex items-center justify-center rounded-full border-[1px] border-white  w-12 h-12  md:hidden"
+      onClick={handleOpenSelector}>
+        <svg className="fill-white stroke-white stroke-2" width="24" height="18">
           <use href="../../../../icons.svg#icon-menu"></use>
         </svg>
       </button>

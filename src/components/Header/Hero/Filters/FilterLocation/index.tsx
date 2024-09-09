@@ -1,6 +1,7 @@
 import { useSelect } from "downshift";
 import { FC } from "react";
 import { ISelectItem } from "../../../../../types";
+import { items } from "../../../../../mock";
 
 interface IFilterLocationProps {
   handleSelect: (selectItem: ISelectItem | null, selectName: string) => void;
@@ -8,12 +9,7 @@ interface IFilterLocationProps {
   isMdOrLarger: boolean;
 }
 
-const items = [
-  { value: "US", label: "United States" },
-  { value: "CA", label: "Canada" },
-  { value: "FR", label: "France" },
-  { value: "DE", label: "Germany" },
-];
+
 
 const FilterLocation: FC<IFilterLocationProps> = ({
   handleSelect,
