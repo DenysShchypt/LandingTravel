@@ -1,32 +1,78 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-html, :host {
+html,
+:host {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: 'Inter', sans-serif; 
+  font-family: "Inter", sans-serif;
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
 }
 
+
+
 .react-calendar {
-  /* Скидання фону */
-  background: none;
-  
-  /* Скидання рамок */
-  border: none;
-
-  /* Скидання відступів та полів */
-  margin: 0;
-  padding: 0;
-
-  /* Скидання кольорів тексту */
-  color: inherit;
+  border: none !important;
+  box-shadow: none !important;
 }
+
+.custom-calendar .react-calendar__navigation {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 300px !important;
+  border-bottom: 1px solid #003c82 !important;
+}
+.custom-calendar .react-calendar__navigation button {
+  padding-bottom: 20px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  letter-spacing: 0.01em !important;
+  text-transform: uppercase !important;
+  color: #003c82 !important;
+}
+.custom-calendar
+  .react-calendar__navigation
+  .react-calendar__navigation__prev2-button {
+  display: none !important;
+}
+.custom-calendar
+  .react-calendar__navigation
+  .react-calendar__navigation__next2-button {
+  display: none !important;
+}
+
+.custom-calendar .react-calendar__month-view__weekdays__weekday {
+  font-weight: 500 !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  color: #003c82 !important;
+}
+.custom-calendar .react-calendar__tile--now {
+  background-color: white !important;
+}
+
+.custom-calendar .react-calendar__tile--active {
+  background-color: #003c82 !important; /* Колір фону для вибраної дати */
+  color: white !important; /* Колір тексту для вибраної дати */
+  border-radius: 40% !important; /* Робимо елемент круглим */
+  width: 24px !important; /* Задаємо ширину для дати */
+}
+
+.custom-calendar .react-calendar__tile {
+  display: flex; /* Використовуємо flex для центровання тексту */
+  align-items: center; /* Вертикальне центровання */
+  justify-content: center;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  text-transform: uppercase !important;
+  color: #003c82;
+}
+
+

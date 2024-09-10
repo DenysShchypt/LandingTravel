@@ -1,3 +1,4 @@
+
 import { FC, useState } from "react";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
@@ -9,8 +10,8 @@ const FilterDateMobile: FC = (): JSX.Element => {
     const [value, onChange] = useState<Value>(new Date());
 
     return (
-        <div>
-        <Calendar onChange={onChange} value={value} />
+        <div className="mx-auto w-[324px]">
+        <Calendar onChange={onChange} value={value} locale='en-US' className="custom-calendar" />
       </div>
     );
 };
