@@ -54,7 +54,7 @@ const FilterLocation: FC<IFilterLocationProps> = ({
 
       <ul
         {...getMenuProps()}
-        className="absolute border-0 w-full bg-white rounded-[20px] border-slate-200 mt-2  shadow-lg"
+        className="absolute border-0 w-full bg-white rounded-[20px] border-[#003c82] mt-2  shadow-lg translate-y-[10px]"
       >
         {isMdOrLarger&&
           isOpen &&

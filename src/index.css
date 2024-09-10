@@ -628,12 +628,40 @@ video {
   position: relative;
 }
 
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.end-1 {
+  inset-inline-end: 0.25rem;
+}
+
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
 .right-0 {
   right: 0px;
 }
 
 .top-0 {
   top: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-10 {
+  top: 2.5rem;
+}
+
+.top-6 {
+  top: 1.5rem;
 }
 
 .m-0 {
@@ -741,6 +769,10 @@ video {
   width: 229px;
 }
 
+.w-\[300px\] {
+  width: 300px;
+}
+
 .w-\[310px\] {
   width: 310px;
 }
@@ -767,6 +799,51 @@ video {
 
 .border-collapse {
   border-collapse: collapse;
+}
+
+.-translate-x-1 {
+  --tw-translate-x: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1 {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-10 {
+  --tw-translate-y: -2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-2 {
+  --tw-translate-y: -0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-10 {
+  --tw-translate-y: 2.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-2 {
+  --tw-translate-y: 0.5rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[10px\] {
+  --tw-translate-y: 10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-\[10px\] {
+  --tw-translate-x: 10px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -859,6 +936,15 @@ video {
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.border-\[\] {
+  border-color: ;
+}
+
+.border-\[\#003c82\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 60 130 / var(--tw-border-opacity));
 }
 
 .bg-auxiliary {
@@ -1099,13 +1185,15 @@ html,
 }
 
 .react-calendar {
-  border: none !important;
-  box-shadow: none !important;
+  border: 1px solid #003c82 !important;
+  border-radius: 20px;
 }
 
 .custom-calendar .react-calendar__navigation {
   margin-left: auto !important;
   margin-right: auto !important;
+  padding-top: 16px;
+  padding-bottom: 16px;
   width: 300px !important;
   border-bottom: 1px solid #003c82 !important;
 }
@@ -1117,6 +1205,11 @@ html,
   letter-spacing: 0.01em !important;
   text-transform: uppercase !important;
   color: #003c82 !important;
+  background-color: transparent !important;
+}
+
+.custom-calendar .react-calendar__navigation button:enabled:hover:focus {
+  background-color: transparent !important;
 }
 
 .custom-calendar
@@ -1148,9 +1241,9 @@ html,
   /* Колір фону для вибраної дати */
   color: white !important;
   /* Колір тексту для вибраної дати */
-  border-radius: 40% !important;
+  border-radius: 40% ;
   /* Робимо елемент круглим */
-  width: 24px !important;
+  width: 24px ;
   /* Задаємо ширину для дати */
 }
 
@@ -1164,6 +1257,7 @@ html,
   font-size: 14px !important;
   text-transform: uppercase !important;
   color: #003c82;
+  border-radius: 40%;
 }
 
 .hover\:bg-gray-300:hover {

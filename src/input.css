@@ -18,13 +18,15 @@ html,
 
 
 .react-calendar {
-  border: none !important;
-  box-shadow: none !important;
+  border: 1px solid #003c82 !important;
+  border-radius: 20px;
 }
 
 .custom-calendar .react-calendar__navigation {
   margin-left: auto !important;
   margin-right: auto !important;
+  padding-top: 16px;
+  padding-bottom: 16px;
   width: 300px !important;
   border-bottom: 1px solid #003c82 !important;
 }
@@ -35,7 +37,12 @@ html,
   letter-spacing: 0.01em !important;
   text-transform: uppercase !important;
   color: #003c82 !important;
+  background-color: transparent !important;
 }
+.custom-calendar .react-calendar__navigation button:enabled:hover:focus {
+  background-color: transparent !important;
+}
+
 .custom-calendar
   .react-calendar__navigation
   .react-calendar__navigation__prev2-button {
@@ -61,8 +68,8 @@ html,
 .custom-calendar .react-calendar__tile--active {
   background-color: #003c82 !important; /* Колір фону для вибраної дати */
   color: white !important; /* Колір тексту для вибраної дати */
-  border-radius: 40% !important; /* Робимо елемент круглим */
-  width: 24px !important; /* Задаємо ширину для дати */
+  border-radius: 40% ; /* Робимо елемент круглим */
+  width: 24px ; /* Задаємо ширину для дати */
 }
 
 .custom-calendar .react-calendar__tile {
@@ -73,6 +80,7 @@ html,
   font-size: 14px !important;
   text-transform: uppercase !important;
   color: #003c82;
+  border-radius: 40%;
 }
 
 

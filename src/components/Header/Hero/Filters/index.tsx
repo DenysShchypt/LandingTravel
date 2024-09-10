@@ -58,9 +58,7 @@ const Filters: FC = (): JSX.Element => {
         <span className="w-full md:w-px h-[1px] md:h-7 md:rounded-lg bg-auxiliary md:bg-customBlue"></span>
       </div>
       <FilterDate
-        handleSelect={handleSelect}
         handleOpenSelector={handleOpenSelector}
-        isMdOrLarger={isMdOrLarger}
       />
       <div className="flex items-center ">
         <span className="w-full md:w-px h-[1px] md:h-7 md:rounded-lg bg-auxiliary md:bg-customBlue"></span>
