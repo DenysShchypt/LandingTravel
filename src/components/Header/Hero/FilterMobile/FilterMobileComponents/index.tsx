@@ -3,6 +3,7 @@ import { useAppSelector } from "../../../../../utils/hooks"
 import NavigateMobile from "../../../Navigate/NavigateMobile"
 import FilterLocationMobile from "../../Filters/FilterLocation/FilterLocationMobile"
 import FilterDateMobile from "../../Filters/FilterDate/FilterDateMobile"
+import FilterGuestMobile from "../../Filters/FilterGuest/FilterGuestMobile"
 
 
 const FilterMobileComponents:FC = ():JSX.Element => {
@@ -16,11 +17,10 @@ const FilterMobileComponents:FC = ():JSX.Element => {
              return <FilterLocationMobile/>
         case "Date":
              return <FilterDateMobile/>
-            
-
-    
+        case "Guest":
+             return <FilterGuestMobile/>
              default:
-                return <div>Welcome! Please select an option.</div>;
+                return <div>Error!</div>;
     }
 }
 

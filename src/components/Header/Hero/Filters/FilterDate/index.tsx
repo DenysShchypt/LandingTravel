@@ -57,7 +57,7 @@ const FilterDate: FC<IFilterDateProps> = ({
       {isOpen && (
         <div
           ref={calendarRef}
-          className="absolute w-[300px] bg-white border-slate-200 mt-2 rounded-[20px] shadow-lg left-1/2 transform -translate-x-1/2 translate-y-[10px]"
+          className="absolute w-[300px] bg-white border-slate-200 rounded-[20px] shadow-lg left-1/2 transform -translate-x-1/2 translate-y-[10px]"
         >
           <Calendar
             onChange={onChange}

@@ -5,11 +5,9 @@ import { items } from "../../../../../mock";
 
 interface IFilterLocationProps {
   handleSelect: (selectItem: ISelectItem | null, selectName: string) => void;
-  handleOpenSelector: (selectName:string) => void;
+  handleOpenSelector: (selectName: string) => void;
   isMdOrLarger: boolean;
 }
-
-
 
 const FilterLocation: FC<IFilterLocationProps> = ({
   handleSelect,
@@ -31,10 +29,7 @@ const FilterLocation: FC<IFilterLocationProps> = ({
     },
   });
   return (
-    <div className="relative " onClick={()=>
-      handleOpenSelector("Location")
-      
-    }>
+    <div className="relative " onClick={() => handleOpenSelector("Location")}>
       <button
         type="button"
         {...getToggleButtonProps()}
@@ -54,9 +49,9 @@ const FilterLocation: FC<IFilterLocationProps> = ({
 
       <ul
         {...getMenuProps()}
-        className="absolute border-0 w-full bg-white rounded-[20px] border-[#003c82] mt-2  shadow-lg translate-y-[10px]"
+        className="absolute border-0 w-full bg-white rounded-[20px] border-[#003c82] shadow-lg translate-y-[10px]"
       >
-        {isMdOrLarger&&
+        {isMdOrLarger &&
           isOpen &&
           items.map((item, index) => (
             <li
