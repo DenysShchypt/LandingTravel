@@ -46,7 +46,7 @@ const Filters: FC = (): JSX.Element => {
 
   return (
     <form
-      className="mx-auto md:flex  justify-end pb-6 md:py-1 md:pr-1 w-[353px] md:w-[549px] rounded-[20px] md:rounded-3xl border border-auxiliary bg-white"
+      className="mx-auto  md:flex  justify-end pb-6 md:py-1 md:pr-1 w-[353px] md:w-[549px] rounded-[20px] md:rounded-3xl border border-auxiliary bg-white"
       onSubmit={handleSubmit}
     >
       <FilterLocation

@@ -8,12 +8,7 @@ export default {
           sans: ['Inter', 'sans-serif'], // або ваш кастомний шрифт
         },
         padding: {
-          xs: "1rem",
-          sm: "1rem",
-          md: "2rem",
-          lg: "4rem",
-          xl: "6rem",
-          "2xl": "12rem",
+          default: "1rem",
         },
         center: true,
       },

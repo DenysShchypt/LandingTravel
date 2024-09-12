@@ -18,7 +18,7 @@ const Header: FC = (): JSX.Element => {
 
   return (
     <header
-      className="h-screen w-screen bg-#003C82 text-white flex"
+      className="pb-[80px] md:pb-[343px] pt-[60px] md:pt-[40px] w-screen bg-#003C82 text-white flex "
       style={styles}
     >
       {isOpenMobileSelect ? (
