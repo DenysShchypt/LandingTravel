@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{css,js,ts,jsx,tsx}","./icons.svg"],
+  content: ["./index.html", "./src/**/*.{css,js,ts,jsx,tsx,jpg}","./icons.svg"],
   theme: {
     extend: {
       container: {
@@ -8,7 +8,12 @@ export default {
           sans: ['Inter', 'sans-serif'], // або ваш кастомний шрифт
         },
         padding: {
-          default: "1rem",
+          xs: "16px",
+          sm: "16px",
+          md: "110px",
+          lg: "110px",
+          xl: "110px",
+          "2xl": "220px",
         },
         center: true,
       },
@@ -18,7 +23,7 @@ export default {
         md: "768px",
         lg: "1024px",
         xl: "1280px",
-        "2xl": "1536px",
+        "2xl": "1600px",
       },
       fontSize: {
         xs: "12px",
