@@ -1,5 +1,5 @@
 import  { FC } from 'react'
-import SwipeExperience from '../../../utils/swiper'
+// import SwipeExperience from '../../../utils/swiper'
 
 const Experience:FC = ():JSX.Element => {
   return (
@@ -9,7 +9,7 @@ const Experience:FC = ():JSX.Element => {
         <p className="px-[14px] xl:px-0 mb-[14px] font-normal text-sm text-center xl:text-start text-black">We offer a wide range of services, including flight booking, hotel booking, car rental, visa assistance, insurance, and tours and activities. We work with leading global service providers to ensure you have the best possible travel experience. We also offer customized solutions for our clients that can be adapted to their specific needs and budget.</p>
         </div>
         <div className="overflow-hidden w-full pl-5 xl:pl-0">
-        <SwipeExperience/>
+        {/* <SwipeExperience/> */}
         </div>
     </section>
   )

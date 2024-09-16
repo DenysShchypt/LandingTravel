@@ -1,8 +1,4 @@
 import { FC } from "react";
-// import bestWay1xWebp from "../../../assets/galleryBestWay/bestWay-1x.webp";
-// import bestWay2xWebp from "../../../assets/galleryBestWay/bestWay-2x.webp";
-// import bestWay1xJpg from "../../../assets/galleryBestWay/bestWay-1x.jpg";
-// import bestWay2xJpg from "../../../assets/galleryBestWay/bestWay-2x.jpg";
 
 const SectionBestWay: FC = (): JSX.Element => {
   return (
@@ -41,14 +37,14 @@ const SectionBestWay: FC = (): JSX.Element => {
       </div>
       <div className=" xl:ml-[140px] 2xl:ml-[220px] p-5 border-[1px] border-solid border-auxiliary rounded-[20px]">
 
-          <iframe
+          {/* <iframe
             className="w-full xl:w-[424px] h-[398px] xl:h-full rounded-[20px]"
             src="https://www.youtube.com/embed/n9LgeoJE4EI"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          ></iframe> */}
 
       </div>
     </section>
@@ -57,24 +53,3 @@ const SectionBestWay: FC = (): JSX.Element => {
 
 export default SectionBestWay;
 
-{
-  /* <picture>
-          <source
-            className="rounded-[20px]"
-            srcSet={`${bestWay1xWebp}, ${bestWay2xWebp}`}
-            media="(min-width: 768px)"
-            type="image/webp"
-          />
-          <source
-            className="rounded-[20px]"
-            srcSet={`${bestWay1xJpg}, ${bestWay2xJpg}`}
-            media="(min-width: 768px)"
-            type="image/jpg"
-          />
-          <img
-            className="object-cover w-full h-full rounded-[20px]"
-            src={bestWay1xJpg}
-            alt="Best Way to Travel"
-          />
-        </picture> */
-}
