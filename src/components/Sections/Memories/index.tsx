@@ -2,7 +2,7 @@ import { FC } from "react";
 import Paris from "../../../assets/memories/paris.jpg";
 import Japan from "../../../assets/memories/japan.jpg";
 import USA from "../../../assets/memories/usa.jpg";
-import Ukraine from "../../../assets/memories/ukraine.jpg";
+import Ukraine from '../../../assets/memories/ukraine.jpg';
 
 const Memories: FC = (): JSX.Element => {
   return (
