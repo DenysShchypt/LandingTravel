@@ -40,6 +40,7 @@ export default {
       },
       colors: {
         auxiliary: "#003c82",
+        comments:"#ecf5ff",
         current: 'currentColor',
         customBlue: 'rgba(0, 60, 130, 0.3)',
       },

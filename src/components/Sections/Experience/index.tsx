@@ -1,5 +1,6 @@
 import  { FC } from 'react'
-import SwipeExperience from '../../../utils/swiper'
+import SwipeExperience from '../../swiperExperience'
+
 
 const Experience:FC = ():JSX.Element => {
   return (

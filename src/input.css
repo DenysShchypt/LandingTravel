@@ -15,7 +15,11 @@ html,
   -webkit-tap-highlight-color: transparent;
 }
 
-
+@layer components {
+  .swiper-slide-active .slide-content {
+    @apply border-[1px] border-auxiliary rounded-[20px]; /* Tailwind classes for border and color */
+  }
+}
 
 .react-calendar {
   border: 1px solid #003c82 !important;
