@@ -70,7 +70,7 @@ const FilterGuest: FC<IFilterGuestProps> = ({
           height="10"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
-          <use href="../../../../../../icons.svg#icon-arrow"></use>
+          <use href="./icons.svg#icon-arrow"></use>
         </svg>
       </button>
 
@@ -94,7 +94,7 @@ const FilterGuest: FC<IFilterGuestProps> = ({
               </p>
               <button onClick={handleIncrementAdult} className="rounded-[100px] text-black w-[14px] h-[14px]">
                 <svg className=" fill-black" width="14" height="14">
-                  <use href="../../../../../../public/icons.svg#icon-pros"></use>
+                  <use href="./icons.svg#icon-pros"></use>
                 </svg>
               </button>
             </div>
@@ -113,7 +113,7 @@ const FilterGuest: FC<IFilterGuestProps> = ({
               </p>
               <button onClick={handleIncrementChildren} className="rounded-[100px] text-black w-[14px] h-[14px]">
                 <svg className=" fill-black" width="14" height="14">
-                  <use href="../../../../../../public/icons.svg#icon-pros"></use>
+                  <use href="./icons.svg#icon-pros"></use>
                 </svg>
               </button>
             </div>

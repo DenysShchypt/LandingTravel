@@ -80,10 +80,10 @@ const Filters: FC = (): JSX.Element => {
         </span>
         <svg
           className=" stroke-current fill-auxiliary stroke-1 hidden md:block"
-          width="20"
-          height="14"
+          width="24"
+          height="24"
         >
-          <use href="../../../../../icons.svg#icon-search"></use>
+          <use href="./icons.svg#icon-search"></use>
         </svg>
       </button>
 

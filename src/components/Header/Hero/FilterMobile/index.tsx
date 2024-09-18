@@ -45,7 +45,7 @@ const FilterMobile: FC = (): JSX.Element => {
                 width="20"
                 height="14"
               >
-                <use href="../../../../../icons.svg#icon-closed"></use>
+                <use href="./icons.svg#icon-closed"></use>
               </svg>
             </button>
           </div>

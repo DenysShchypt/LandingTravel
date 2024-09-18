@@ -36,7 +36,7 @@ const Navigate: FC = (): JSX.Element => {
       <button className="flex items-center justify-center rounded-full border-[1px] border-white  w-12 h-12  md:hidden"
       onClick={handleOpenSelector}>
         <svg className="fill-white stroke-white stroke-2" width="24" height="18">
-          <use href="../../../../icons.svg#icon-menu"></use>
+          <use href="./icons.svg#icon-menu"></use>
         </svg>
       </button>
     </nav>

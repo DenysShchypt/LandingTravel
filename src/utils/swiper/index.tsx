@@ -33,7 +33,7 @@ const SwipeExperience: FC = (): JSX.Element => {
           />
           <div className="absolute top-[33px] xl:top-[53px] left-[20px] xl:left-[40px] flex items-center">
             <svg className="mr-[10px] fill-white" width="16" height="20">
-              <use href="../../../icons.svg#icon-local"></use>
+              <use href="./icons.svg#icon-local"></use>
             </svg>
             <h3 className="font-medium text-white text-4xl">Paris</h3>
           </div>
@@ -62,7 +62,7 @@ const SwipeExperience: FC = (): JSX.Element => {
           />
           <div className="absolute top-[33px] xl:top-[53px] left-[20px] xl:left-[40px] flex items-center">
             <svg className="mr-[10px] fill-white" width="16" height="20">
-              <use href="../../../icons.svg#icon-local"></use>
+              <use href="./icons.svg#icon-local"></use>
             </svg>
             <h3 className="font-medium text-white text-4xl">Canada</h3>
           </div>
@@ -91,7 +91,7 @@ const SwipeExperience: FC = (): JSX.Element => {
           />
           <div className="absolute top-[33px] xl:top-[53px] left-[20px] xl:left-[40px] flex items-center">
             <svg className="mr-[10px] fill-white" width="16" height="20">
-              <use href="../../../icons.svg#icon-local"></use>
+              <use href="./icons.svg#icon-local"></use>
             </svg>
             <h3 className="font-medium text-white text-4xl">Greece</h3>
           </div>
@@ -118,7 +118,7 @@ const SwipeExperience: FC = (): JSX.Element => {
           />
           <div className="absolute top-[33px] xl:top-[53px] left-[20px] xl:left-[40px] flex items-center">
             <svg className="mr-[10px] fill-white" width="16" height="20">
-              <use href="../../../icons.svg#icon-local"></use>
+              <use href="./icons.svg#icon-local"></use>
             </svg>
             <h3 className="font-medium text-white text-4xl">Venice</h3>
           </div>

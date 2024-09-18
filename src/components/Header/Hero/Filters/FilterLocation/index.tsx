@@ -43,7 +43,7 @@ const FilterLocation: FC<IFilterLocationProps> = ({
           height="10"
           style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
         >
-          <use href="../../../../../../icons.svg#icon-arrow"></use>
+          <use href="./icons.svg#icon-arrow"></use>
         </svg>
       </button>
 
