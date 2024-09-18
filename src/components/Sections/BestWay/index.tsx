@@ -37,14 +37,14 @@ const SectionBestWay: FC = (): JSX.Element => {
       </div>
       <div className=" xl:ml-[140px] 2xl:ml-[220px] p-5 border-[1px] border-solid border-auxiliary rounded-[20px]">
 
-          {/* <iframe
+         <iframe
             className="w-full xl:w-[424px] h-[398px] xl:h-full rounded-[20px]"
             src="https://www.youtube.com/embed/n9LgeoJE4EI"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe> */}
+          ></iframe> 
 
       </div>
     </section>
