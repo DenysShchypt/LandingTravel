@@ -1,49 +1,81 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Mousewheel } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperClass } from "swiper";
+import { clients } from "../../mock";
+import { useMediaQuery } from "react-responsive";
 
 const SwipeHappyClients: FC = (): JSX.Element => {
+  const [swiperInstance, setSwiperInstance] = useState<SwiperClass | null>(
+    null
+  );
+  const isMdOrLarger = useMediaQuery({ minWidth: 768 });
   return (
-    <>
+    <div className="relative">
+      <button
+        className={`absolute ${isMdOrLarger?'left-[33%]':'left-0'} bottom-0 cursor-pointer z-10 p-3`}
+        type="button"
+        onClick={() => swiperInstance?.slidePrev()}
+      >
+        <svg
+          className="  transform -translate-y-1/2 fill-black "
+          width="18"
+          height="14"
+        >
+          <use href="./icons.svg#icon-left"></use>
+        </svg>
+      </button>
+      <button
+        className={`absolute ${isMdOrLarger?'right-[33%]':'right-0'} bottom-0 cursor-pointer z-10 p-3`}
+        type="button"
+        onClick={() => swiperInstance?.slideNext()}
+      >
+        <svg
+          className=" transform -translate-y-1/2 fill-black"
+          width="18"
+          height="14"
+        >
+          <use href="./icons.svg#icon-right"></use>
+        </svg>
+      </button>
+
       <Swiper
         speed={1000}
         slidesPerView="auto"
-        centeredSlides={false}
-        spaceBetween={20}
+        centeredSlides={true}
+        spaceBetween={31}
         grabCursor={true}
         mousewheel={true}
         loop={true}
         modules={[Mousewheel]}
+        onSwiper={(swiper) => setSwiperInstance(swiper)}
       >
-        <SwiperSlide>
-            <div className="slide-content flex items-center justify-center w-full h-full">
-          <div className="w-[366px] p-5">
-            <div className="relative bg-comments mb-9 pt-6 pr-7 pb-9 pl-5">
-              <p className="font-normal text-sm text-black">
-                Affordable and reliable! I was looking for a budget-friendly
-                vacation and I found a great deal through the travel agency. The
-                agent I worked with was very helpful and she was able to find me
-                a great flight and hotel at a price that fit my budget.
-              </p>
-              <svg className="absolute bottom-[-6%] left-[50%]  fill-comments" width="33" height="28">
-                <use href="./icons.svg#icon-polygon"></use>
-              </svg>
-            </div>
-          </div>
-          </div>
-          <div className="flex justify-between items-center">
-          <svg className="fill-black" width="18" height="14">
-                <use href="./icons.svg#icon-left"></use>
-              </svg>
-              <h3 className="">Alex</h3>
-              <svg className="fill-black" width="18" height="14">
-                <use href="./icons.svg#icon-right"></use>
-              </svg>
-          </div>
-
-        </SwiperSlide>
+        {clients &&
+          clients.map((slide, index) => (
+            <SwiperSlide key={index} style={{ maxWidth: "366px" }}>
+              <div className="slide-content p-5 mb-5 ">
+                <div className="relative bg-comments h-[185px] mb-9 pt-6 pr-7 pb-9 pl-5 rounded-xl">
+                  <p className="font-normal text-sm text-black">
+                    {slide.comment}
+                  </p>
+                  <svg
+                    className="absolute bottom-[-6%] left-[45%]  fill-comments"
+                    width="33"
+                    height="28"
+                  >
+                    <use href="./icons.svg#icon-polygon"></use>
+                  </svg>
+                  
+                </div>
+                <img src={slide.avatar as string} alt="chan" className="rounded-full mx-auto" />
+              </div>
+              <div className="flex justify-center items-center">
+                <h3 className="font-semibold text-4xl">{slide.name}</h3>
+              </div>
+            </SwiperSlide>
+          ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

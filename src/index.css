@@ -608,12 +608,21 @@ video {
   }
 }
 
+.slide-content {
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: transparent;
+  /* Default state: no visible border */
+  transition: border-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  /* Smooth transition */
+}
+
 .swiper-slide-active .slide-content {
   border-radius: 20px;
   border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(0 60 130 / var(--tw-border-opacity));
-  /* Tailwind classes for border and color */
+  /* Border on the active slide */
 }
 
 .visible {
@@ -656,6 +665,14 @@ video {
   bottom: 3rem;
 }
 
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
 .bottom-\[-6\%\] {
   bottom: -6%;
 }
@@ -696,12 +713,20 @@ video {
   left: 20px;
 }
 
+.left-\[33\%\] {
+  left: 33%;
+}
+
 .left-\[50\%\] {
   left: 50%;
 }
 
 .right-0 {
   right: 0px;
+}
+
+.right-\[33\%\] {
+  right: 33%;
 }
 
 .right-\[43px\] {
@@ -726,6 +751,30 @@ video {
 
 .top-\[33px\] {
   top: 33px;
+}
+
+.bottom-\[-5\%\] {
+  bottom: -5%;
+}
+
+.bottom-2 {
+  bottom: 0.5rem;
+}
+
+.left-\[40\%\] {
+  left: 40%;
+}
+
+.left-\[45\%\] {
+  left: 45%;
+}
+
+.left-\[100\%\] {
+  left: 100%;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .col-span-1 {
@@ -939,6 +988,10 @@ video {
   height: 100vh;
 }
 
+.h-\[185px\] {
+  height: 185px;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -989,10 +1042,6 @@ video {
 
 .w-\[353px\] {
   width: 353px;
-}
-
-.w-\[366px\] {
-  width: 366px;
 }
 
 .w-full {
@@ -1060,6 +1109,11 @@ video {
 
 .-translate-y-1 {
   --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1205,6 +1259,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-s-3xl {
   border-start-start-radius: 1.5rem;
   border-end-start-radius: 1.5rem;
@@ -1248,6 +1306,10 @@ video {
 .border-slate-200 {
   --tw-border-opacity: 1;
   border-color: rgb(226 232 240 / var(--tw-border-opacity));
+}
+
+.border-transparent {
+  border-color: transparent;
 }
 
 .border-white {
@@ -1316,6 +1378,18 @@ video {
   stroke: currentColor;
 }
 
+.stroke-slate-100 {
+  stroke: #f1f5f9;
+}
+
+.stroke-slate-50 {
+  stroke: #f8fafc;
+}
+
+.stroke-slate-500 {
+  stroke: #64748b;
+}
+
 .stroke-white {
   stroke: #fff;
 }
@@ -1331,6 +1405,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .p-4 {

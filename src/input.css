@@ -16,8 +16,13 @@ html,
 }
 
 @layer components {
+  .slide-content {
+    @apply border-[1px] border-transparent rounded-[20px]; /* Default state: no visible border */
+    transition: border-color 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+  }
+
   .swiper-slide-active .slide-content {
-    @apply border-[1px] border-auxiliary rounded-[20px]; /* Tailwind classes for border and color */
+    @apply border-[1px] border-auxiliary rounded-[20px]; /* Border on the active slide */
   }
 }
 
