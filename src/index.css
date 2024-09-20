@@ -1060,6 +1060,10 @@ video {
   max-width: 1px;
 }
 
+.max-w-\[565px\] {
+  max-width: 565px;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1342,6 +1346,18 @@ video {
   --tw-bg-opacity: 0.05;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
 .fill-auxiliary {
   fill: #003c82;
 }
@@ -1409,6 +1425,10 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-24 {
+  padding: 6rem;
 }
 
 .px-0 {
@@ -1481,6 +1501,11 @@ video {
   padding-bottom: 15px;
 }
 
+.px-\[44px\] {
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1539,6 +1564,10 @@ video {
 
 .pt-\[72px\] {
   padding-top: 72px;
+}
+
+.pb-\[104px\] {
+  padding-bottom: 104px;
 }
 
 .text-center {
