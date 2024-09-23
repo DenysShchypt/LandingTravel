@@ -22,9 +22,9 @@ const FilterMobile: FC = (): JSX.Element => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          initial={{ opacity: 0, x: "100%" }}
-          animate={{ opacity: 0.9, x: 0 }}
-          exit={{ opacity: 0, x: "100%" }}
+          initial={{ opacity: 0.5, x: "100%" }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0.5, x: "100%" }}
           transition={{ duration: 0.5 }}
           className="fixed top-0 right-0 h-full w-full bg-white px-8 pt-[72px] xl:hidden"
         >

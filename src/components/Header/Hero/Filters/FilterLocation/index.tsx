@@ -2,6 +2,7 @@ import { useSelect } from "downshift";
 import { FC } from "react";
 import { ISelectItem } from "../../../../../types";
 import { items } from "../../../../../mock";
+import { useAppSelector } from "../../../../../utils/hooks";
 
 interface IFilterLocationProps {
   handleSelect: (selectItem: ISelectItem | null, selectName: string) => void;
@@ -28,13 +29,18 @@ const FilterLocation: FC<IFilterLocationProps> = ({
       handleSelect(selectedItem, "location");
     },
   });
+  const isOpenMobileSelect = useAppSelector(
+    (state) => state.select.isOpenMobileSelector
+  );
+
   return (
     <div className="relative " onClick={() => handleOpenSelector("Location")}>
-      <button
+     <button
         type="button"
         {...getToggleButtonProps()}
-        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center
-        "
+        className={`${
+          isOpenMobileSelect ? "appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2 bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center" : "appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2 text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center"
+        }`}
       >
         {selectedItem ? selectedItem.label : "Location"}
         <svg

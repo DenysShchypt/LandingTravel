@@ -27,12 +27,14 @@ html,
 }
 @layer components {
   .slide-arrow {
-    @apply transform -translate-y-1/2 fill-transparent; /* Default state: no visible border */
-    transition: border-color 0.7s ease-in-out, opacity 0.7s ease-in-out; /* Smooth transition */
+    @apply transform -translate-y-1/2 fill-transparent; /* Default state: no visible fill */
+    transition: fill 1s ease-in-out 0.3s; /* Delay only the fill transition by 5 seconds */
+    opacity: 1; /* Initially hidden */
   }
 
   .swiper-slide-active .slide-arrow {
-    @apply  transform -translate-y-1/2 fill-black; /* Border on the active slide */
+    @apply transform -translate-y-1/2 fill-black; /* Fill black on the active slide */
+    opacity: 1; /* Show after transition */
   }
 }
 

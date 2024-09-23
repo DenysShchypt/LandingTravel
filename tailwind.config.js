@@ -43,6 +43,8 @@ export default {
         comments:"#ecf5ff",
         current: 'currentColor',
         customBlue: 'rgba(0, 60, 130, 0.3)',
+        footerTitle:'#f2f2f2',
+        inputText:'rgba(0, 60, 130, 0.5);'
       },
       transitionProperty: {
         'opacity-transform': 'opacity, transform',

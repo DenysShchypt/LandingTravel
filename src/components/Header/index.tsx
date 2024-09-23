@@ -15,22 +15,18 @@ const Header: FC = (): JSX.Element => {
   const isOpenMobileSelect = useAppSelector(
     (state) => state.select.isOpenMobileSelector
   );
- 
+
   return (
     <header
       className="pb-[80px] md:pb-[343px] pt-[60px] md:pt-[40px] w-screen bg-#003C82 text-white flex "
       style={styles}
     >
-      {isOpenMobileSelect ? (
+      {isOpenMobileSelect && <FilterMobile />}
 
-          <FilterMobile />
-
-      ) : (
-        <div className="container">
-          <Navigate />
-          <Hero />
-        </div>
-      )}
+      <div className="container">
+        <Navigate />
+        <Hero />
+      </div>
     </header>
   );
 };

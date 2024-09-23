@@ -8,13 +8,13 @@ const ContactUs: FC = (): JSX.Element => {
 
   return (
     <section
-      className="mb-10 pt-[100px] pb-[104px] px-[44px] text-white bg-cover bg-center"
+      className="pt-[70px] xl:pt-[100px] pb-[100px] px-[30px] xl:px-[44px] text-white bg-cover bg-center"
       style={styles}
     >
-      <h2 className="font-semibold text-3xl xl:text-6xl text-center">
+      <h2 className="mb-[60px] xl:mb-10 font-semibold text-3xl xl:text-6xl text-center">
         Let Us Show You the World
       </h2>
-      <p className="max-w-[565px] mx-auto mb-[60px] font-normal text-sm text-center">
+      <p className="max-w-[333px] xl:max-w-[565px] mx-auto mb-[80px] xl:mb-[60px] font-normal text-sm text-center">
         We'll work with you to create a customized travel plan that fits your
         needs and budget. We'll also help you book your flights, hotels, and
         activities. And best of all, we'll give you a 10% discount on your first
