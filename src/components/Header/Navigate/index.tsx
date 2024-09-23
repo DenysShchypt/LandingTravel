@@ -16,7 +16,7 @@ const Navigate: FC = (): JSX.Element => {
   };
   return (
     <nav className="w-full flex justify-between mt-10 mb-24">
-      <a href="../../../index.html" className="text-2xl font-bold mr-auto ">
+      <a href="https://denysshchypt.github.io/LandingTravel" className="text-2xl font-bold mr-auto ">
         Turistoe
       </a>
       <ul className="hidden md:flex items-center  text-white rounded-3xl border border-gray-300">
