@@ -1,9 +1,9 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 const SectionBestWay: FC = (): JSX.Element => {
   return (
     <section className="container xl:flex pt-[100px] xl:pt-[289px] pb-[150px] xl:pb-[300px] ">
-      <div >
+      <div>
         <h2 className="mb-[60px] xl:mb-[80px] font-semibold text-3xl xl:text-6xl text-center xl:text-start text-black">
           Best Way to Travel
         </h2>
@@ -36,20 +36,17 @@ const SectionBestWay: FC = (): JSX.Element => {
         </button>
       </div>
       <div className=" xl:ml-[140px] 2xl:ml-[220px] p-5 border-[1px] border-solid border-auxiliary rounded-[20px]">
-
-         <iframe
-            className="w-full xl:w-[424px] h-[398px] xl:h-full rounded-[20px]"
-            src="https://www.youtube.com/embed/n9LgeoJE4EI"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe> 
-
+        <iframe
+          className="w-full xl:w-[424px] h-[398px] xl:h-full rounded-[20px]"
+          src="https://www.youtube.com/embed/n9LgeoJE4EI"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default SectionBestWay;
-
+export default SectionBestWay

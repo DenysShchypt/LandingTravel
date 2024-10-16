@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC } from 'react'
 
 const Footer: FC = (): JSX.Element => {
   return (
@@ -63,7 +63,9 @@ const Footer: FC = (): JSX.Element => {
           </form>
         </div>
         <div className="w-[167px] xl:w-[169px] pt-10 pr-8 pb-[102px] pl-5 xl:pl-[25px] rounded-[20px] border-white border-[1px] border-solid order-2 xl:order-3">
-          <h4 className="mb-[30px] font-bold text-2xl text-footerTitle">About</h4>
+          <h4 className="mb-[30px] font-bold text-2xl text-footerTitle">
+            About
+          </h4>
           <ul className=" font-normal text-white text-sm">
             <li className="mb-3">About Us</li>
             <li className="mb-3">Career</li>
@@ -72,7 +74,9 @@ const Footer: FC = (): JSX.Element => {
           </ul>
         </div>
         <div className="w-[166px] xl:w-[169px] pt-10 pr-12 pb-[125px] pl-5 xl:pl-[25px] rounded-[20px] border-white border-[1px] border-solid order-3 xl:order-4">
-          <h4 className="mb-[30px] font-bold text-2xl text-footerTitle">Support</h4>
+          <h4 className="mb-[30px] font-bold text-2xl text-footerTitle">
+            Support
+          </h4>
           <ul className=" font-normal text-white text-sm/6">
             <li className="mb-3">Contact</li>
             <li className="mb-3">FAQ</li>
@@ -85,7 +89,7 @@ const Footer: FC = (): JSX.Element => {
         Copyright ©2023. All Rights Reserved.
       </p>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

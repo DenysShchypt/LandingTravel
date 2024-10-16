@@ -1,16 +1,16 @@
-import { FC } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Mousewheel } from "swiper/modules";
-import French from "../../assets/experience/French.jpg";
-import Canada from "../../assets/experience/Canada.jpg";
-import Greece from "../../assets/experience/Greece.jpg";
-import Venice from "../../assets/experience/Venice.jpg";
-import { useMediaQuery } from "react-responsive";
+import { FC } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import { Mousewheel } from 'swiper/modules'
+import French from '../../assets/experience/French.jpg'
+import Canada from '../../assets/experience/Canada.jpg'
+import Greece from '../../assets/experience/Greece.jpg'
+import Venice from '../../assets/experience/Venice.jpg'
+import { useMediaQuery } from 'react-responsive'
 
 const SwipeExperience: FC = (): JSX.Element => {
-  const isMdOrLarger = useMediaQuery({ minWidth: 768 });
+  const isMdOrLarger = useMediaQuery({ minWidth: 768 })
   return (
     <Swiper
       speed={1000}
@@ -23,7 +23,7 @@ const SwipeExperience: FC = (): JSX.Element => {
       modules={[Mousewheel]}
     >
       <SwiperSlide
-        style={!isMdOrLarger ? { maxWidth: "327px" } : { maxWidth: "367px" }}
+        style={!isMdOrLarger ? { maxWidth: '327px' } : { maxWidth: '367px' }}
       >
         <div className="relative xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
           <img
@@ -52,7 +52,7 @@ const SwipeExperience: FC = (): JSX.Element => {
         </div>
       </SwiperSlide>
       <SwiperSlide
-        style={!isMdOrLarger ? { maxWidth: "327px" } : { maxWidth: "367px" }}
+        style={!isMdOrLarger ? { maxWidth: '327px' } : { maxWidth: '367px' }}
       >
         <div className="relative xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
           <img
@@ -81,7 +81,7 @@ const SwipeExperience: FC = (): JSX.Element => {
         </div>
       </SwiperSlide>
       <SwiperSlide
-        style={!isMdOrLarger ? { maxWidth: "327px" } : { maxWidth: "367px" }}
+        style={!isMdOrLarger ? { maxWidth: '327px' } : { maxWidth: '367px' }}
       >
         <div className="relative  xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
           <img
@@ -108,7 +108,7 @@ const SwipeExperience: FC = (): JSX.Element => {
         </div>
       </SwiperSlide>
       <SwiperSlide
-        style={!isMdOrLarger ? { maxWidth: "327px" } : { maxWidth: "367px" }}
+        style={!isMdOrLarger ? { maxWidth: '327px' } : { maxWidth: '367px' }}
       >
         <div className="relative xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
           <img
@@ -135,7 +135,7 @@ const SwipeExperience: FC = (): JSX.Element => {
         </div>
       </SwiperSlide>
     </Swiper>
-  );
-};
+  )
+}
 
-export default SwipeExperience;
+export default SwipeExperience

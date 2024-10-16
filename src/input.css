@@ -9,7 +9,7 @@ html,
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
@@ -18,7 +18,9 @@ html,
 @layer components {
   .slide-content {
     @apply border-[1px] border-transparent rounded-[20px]; /* Default state: no visible border */
-    transition: border-color 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+    transition:
+      border-color 1s ease-in-out,
+      opacity 1s ease-in-out; /* Smooth transition */
   }
 
   .swiper-slide-active .slide-content {
@@ -89,8 +91,8 @@ html,
 .custom-calendar .react-calendar__tile--active {
   background-color: #003c82 !important; /* Колір фону для вибраної дати */
   color: white !important; /* Колір тексту для вибраної дати */
-  border-radius: 40% ; /* Робимо елемент круглим */
-  width: 24px ; /* Задаємо ширину для дати */
+  border-radius: 40%; /* Робимо елемент круглим */
+  width: 24px; /* Задаємо ширину для дати */
 }
 
 .custom-calendar .react-calendar__tile {
@@ -103,5 +105,3 @@ html,
   color: #003c82;
   border-radius: 40%;
 }
-
-

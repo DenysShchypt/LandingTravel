@@ -613,7 +613,9 @@ video {
   border-width: 1px;
   border-color: transparent;
   /* Default state: no visible border */
-  transition: border-color 1s ease-in-out, opacity 1s ease-in-out;
+  transition:
+      border-color 1s ease-in-out,
+      opacity 1s ease-in-out;
   /* Smooth transition */
 }
 
@@ -667,6 +669,10 @@ video {
 
 .relative {
   position: relative;
+}
+
+.inset-0 {
+  inset: 0px;
 }
 
 .-top-1 {
@@ -777,6 +783,14 @@ video {
   z-index: 10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
 .order-1 {
   order: 1;
 }
@@ -882,10 +896,6 @@ video {
 
 .mb-\[40px\] {
   margin-bottom: 40px;
-}
-
-.mb-\[50px\] {
-  margin-bottom: 50px;
 }
 
 .mb-\[60px\] {
@@ -1044,8 +1054,12 @@ video {
   width: 14px;
 }
 
-.w-\[169px\] {
-  width: 169px;
+.w-\[166px\] {
+  width: 166px;
+}
+
+.w-\[167px\] {
+  width: 167px;
 }
 
 .w-\[178px\] {
@@ -1072,16 +1086,16 @@ video {
   width: 310px;
 }
 
+.w-\[313px\] {
+  width: 313px;
+}
+
 .w-\[324px\] {
   width: 324px;
 }
 
 .w-\[353px\] {
   width: 353px;
-}
-
-.w-\[379px\] {
-  width: 379px;
 }
 
 .w-full {
@@ -1096,28 +1110,16 @@ video {
   width: 100vw;
 }
 
-.w-\[313px\] {
-  width: 313px;
-}
-
-.w-\[166px\] {
-  width: 166px;
-}
-
-.w-\[167px\] {
-  width: 167px;
-}
-
 .min-w-full {
   min-width: 100%;
 }
 
-.max-w-\[186px\] {
-  max-width: 186px;
+.max-w-\[164px\] {
+  max-width: 164px;
 }
 
-.max-w-\[213px\] {
-  max-width: 213px;
+.max-w-\[186px\] {
+  max-width: 186px;
 }
 
 .max-w-\[333px\] {
@@ -1134,18 +1136,6 @@ video {
 
 .max-w-px {
   max-width: 1px;
-}
-
-.max-w-\[164px\] {
-  max-width: 164px;
-}
-
-.max-w-\[112px\] {
-  max-width: 112px;
-}
-
-.max-w-\[96px\] {
-  max-width: 96px;
 }
 
 .border-collapse {
@@ -1309,20 +1299,16 @@ video {
   gap: 2.75rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-7 {
   gap: 1.75rem;
 }
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-\[15px\] {
-  gap: 15px;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .gap-\[30px\] {
@@ -1337,6 +1323,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
 .rounded-3xl {
@@ -1581,11 +1571,6 @@ video {
   padding-right: 14px;
 }
 
-.px-\[220px\] {
-  padding-left: 220px;
-  padding-right: 220px;
-}
-
 .px-\[27px\] {
   padding-left: 27px;
   padding-right: 27px;
@@ -1641,6 +1626,10 @@ video {
   padding-bottom: 15px;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1663,10 +1652,6 @@ video {
 
 .pb-\[150px\] {
   padding-bottom: 150px;
-}
-
-.pb-\[49px\] {
-  padding-bottom: 49px;
 }
 
 .pb-\[56px\] {
@@ -1697,10 +1682,6 @@ video {
   padding-left: 1.25rem;
 }
 
-.pl-\[25px\] {
-  padding-left: 25px;
-}
-
 .pr-0 {
   padding-right: 0px;
 }
@@ -1713,6 +1694,10 @@ video {
   padding-right: 3rem;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
 .pr-7 {
   padding-right: 1.75rem;
 }
@@ -1723,10 +1708,6 @@ video {
 
 .pr-\[29px\] {
   padding-right: 29px;
-}
-
-.pr-\[61px\] {
-  padding-right: 61px;
 }
 
 .pt-10 {
@@ -1751,14 +1732,6 @@ video {
 
 .pt-\[72px\] {
   padding-top: 72px;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -1943,7 +1916,7 @@ html,
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-feature-settings: normal;
   font-variation-settings: normal;
   -webkit-tap-highlight-color: transparent;
@@ -2006,9 +1979,9 @@ html,
   /* Колір фону для вибраної дати */
   color: white !important;
   /* Колір тексту для вибраної дати */
-  border-radius: 40% ;
+  border-radius: 40%;
   /* Робимо елемент круглим */
-  width: 24px ;
+  width: 24px;
   /* Задаємо ширину для дати */
 }
 
@@ -2282,28 +2255,28 @@ html,
     display: flex;
   }
 
-  .xl\:hidden {
-    display: none;
-  }
-
   .xl\:h-full {
     height: 100%;
-  }
-
-  .xl\:w-\[424px\] {
-    width: 424px;
-  }
-
-  .xl\:w-\[379px\] {
-    width: 379px;
   }
 
   .xl\:w-\[169px\] {
     width: 169px;
   }
 
+  .xl\:w-\[379px\] {
+    width: 379px;
+  }
+
+  .xl\:w-\[424px\] {
+    width: 424px;
+  }
+
   .xl\:w-full {
     width: 100%;
+  }
+
+  .xl\:max-w-\[213px\] {
+    max-width: 213px;
   }
 
   .xl\:max-w-\[456px\] {
@@ -2312,10 +2285,6 @@ html,
 
   .xl\:max-w-\[565px\] {
     max-width: 565px;
-  }
-
-  .xl\:max-w-\[213px\] {
-    max-width: 213px;
   }
 
   .xl\:flex-nowrap {
@@ -2364,34 +2333,34 @@ html,
     padding-right: 0px;
   }
 
-  .xl\:px-\[44px\] {
-    padding-left: 44px;
-    padding-right: 44px;
-  }
-
   .xl\:px-\[220px\] {
     padding-left: 220px;
     padding-right: 220px;
+  }
+
+  .xl\:px-\[44px\] {
+    padding-left: 44px;
+    padding-right: 44px;
   }
 
   .xl\:pb-\[300px\] {
     padding-bottom: 300px;
   }
 
+  .xl\:pb-\[49px\] {
+    padding-bottom: 49px;
+  }
+
   .xl\:pl-0 {
     padding-left: 0px;
   }
 
+  .xl\:pl-5 {
+    padding-left: 1.25rem;
+  }
+
   .xl\:pl-\[220px\] {
     padding-left: 220px;
-  }
-
-  .xl\:pt-\[100px\] {
-    padding-top: 100px;
-  }
-
-  .xl\:pt-\[289px\] {
-    padding-top: 289px;
   }
 
   .xl\:pl-\[25px\] {
@@ -2402,12 +2371,12 @@ html,
     padding-right: 61px;
   }
 
-  .xl\:pb-\[49px\] {
-    padding-bottom: 49px;
+  .xl\:pt-\[100px\] {
+    padding-top: 100px;
   }
 
-  .xl\:pl-5 {
-    padding-left: 1.25rem;
+  .xl\:pt-\[289px\] {
+    padding-top: 289px;
   }
 
   .xl\:text-start {
@@ -2429,5 +2398,3 @@ html,
     margin-left: 220px;
   }
 }
-
-

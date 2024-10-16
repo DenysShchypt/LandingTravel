@@ -1,48 +1,44 @@
-import { FC, useState } from "react";
-import { useMediaQuery } from "react-responsive";
-import FilterLocation from "./FilterLocation";
-import FilterDate from "./FilterDate";
-import FilterGuest from "./FilterGuest";
-import {
-  ISelectItem,
-  ISelectValue,
-} from "../../../../types";
-import { useAppDispatch } from "../../../../utils/hooks";
-import { openMobileSelector } from "../../../../store/slice";
-
+import { FC, useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
+import FilterLocation from './FilterLocation'
+import FilterDate from './FilterDate'
+import FilterGuest from './FilterGuest'
+import { ISelectItem, ISelectValue } from '../../../../types'
+import { useAppDispatch } from '../../../../utils/hooks'
+import { openMobileSelector } from '../../../../store/slice'
 
 const Filters: FC = (): JSX.Element => {
-
   const dispatch = useAppDispatch()
-  const isMdOrLarger = useMediaQuery({ minWidth: 768 });
+  const isMdOrLarger = useMediaQuery({ minWidth: 768 })
 
   const [choseOfCountry, setChoseOfCountry] = useState<ISelectValue>({
-    location: "",
-    date: "",
-    guest: "",
-  });
+    location: '',
+    date: '',
+    guest: '',
+  })
 
   const handleOpenSelector = (selectName: string) => {
     if (!isMdOrLarger) {
-      dispatch(openMobileSelector({
-        isOpenMobileSelector: true,
-        selectName,
-      }))
-
+      dispatch(
+        openMobileSelector({
+          isOpenMobileSelector: true,
+          selectName,
+        })
+      )
     }
-  };
+  }
 
   const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
-    console.log("Form Submitted with values:", choseOfCountry);
-  };
+    event.preventDefault()
+    console.log('Form Submitted with values:', choseOfCountry)
+  }
 
   const handleSelect = (selectItem: ISelectItem | null, selectName: string) => {
     setChoseOfCountry((prevValue) => ({
       ...prevValue,
-      [selectName]: selectItem ? selectItem.label : "",
-    }));
-  };
+      [selectName]: selectItem ? selectItem.label : '',
+    }))
+  }
 
   return (
     <form
@@ -57,9 +53,7 @@ const Filters: FC = (): JSX.Element => {
       <div className="flex items-center">
         <span className="w-full md:w-px h-[1px] md:h-7 md:rounded-lg bg-auxiliary md:bg-customBlue"></span>
       </div>
-      <FilterDate
-        handleOpenSelector={handleOpenSelector}
-      />
+      <FilterDate handleOpenSelector={handleOpenSelector} />
       <div className="flex items-center ">
         <span className="w-full md:w-px h-[1px] md:h-7 md:rounded-lg bg-auxiliary md:bg-customBlue"></span>
       </div>
@@ -86,9 +80,8 @@ const Filters: FC = (): JSX.Element => {
           <use href="./icons.svg#icon-search"></use>
         </svg>
       </button>
-
     </form>
-  );
-};
+  )
+}
 
-export default Filters;
+export default Filters

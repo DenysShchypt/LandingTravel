@@ -1,10 +1,10 @@
-import { FC } from "react";
-import bgContact from "../../../assets/bgContact.jpg";
+import { FC } from 'react'
+import bgContact from '../../../assets/bgContact.jpg'
 
 const ContactUs: FC = (): JSX.Element => {
   const styles = {
     backgroundImage: `linear-gradient(to top, rgba(0, 60, 130, 0.8) 0%, rgba(0, 60, 130, 0) 100%), url(${bgContact})`,
-  };
+  }
 
   return (
     <section
@@ -27,11 +27,9 @@ const ContactUs: FC = (): JSX.Element => {
         Contact Us
       </button>
     </section>
-  );
-};
+  )
+}
 
-export default ContactUs;
-
-
+export default ContactUs
 
 // hi. how I can make in Tailwind CSS   background: linear-gradient(180deg, rgba(0, 60, 130, 0.8) 0%, rgba(0, 60, 130, 0.8) 100%), url("path_to_image");
