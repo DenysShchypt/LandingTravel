@@ -11,12 +11,14 @@ const Memories: FC = (): JSX.Element => {
         Travel Memories
       </h2>
       <div className="grid md:grid-rows-2 md:grid-flow-col gap-8">
-        <div className="relative md:row-span-2 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
-          <img
-            className="object-cover w-full h-[327px] md:h-full rounded-[20px]"
-            src={Paris}
-            alt="Best Way to Travel French"
-          />
+        <div className="relative md:row-span-2 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] group overflow-hidden hover:xl:border-white transition-all duration-300">
+          <div className="relative w-full h-[327px] md:h-full group-hover:xl:w-[calc(100%+40px)] group-hover:xl:h-[calc(100%+40px)] group-hover:xl:-m-5 transition-all duration-300">
+            <img
+              className="object-cover w-full h-full rounded-[20px]"
+              src={Paris}
+              alt="Best Way to Travel French"
+            />
+          </div>
           <div className="absolute left-8 md:left-10 bottom-10 md:bottom-[60px] text-white">
             <h3 className="font-normal text-4xl/4 mb-[15px]">Paris</h3>
             <ul className="list-disc pl-4">
@@ -25,12 +27,14 @@ const Memories: FC = (): JSX.Element => {
             </ul>
           </div>
         </div>
-        <div className="relative md:col-span-2 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
-          <img
-            className="object-cover w-full h-[327px] rounded-[20px]"
-            src={Japan}
-            alt="Best Way to Travel French"
-          />
+        <div className="relative md:col-span-2 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] group overflow-hidden hover:xl:border-white transition-all duration-300">
+          <div className="relative w-full h-[327px] group-hover:xl:w-[calc(100%+40px)] group-hover:xl:h-[366px] group-hover:xl:-m-5 transition-all duration-300">
+            <img
+              className="object-cover w-full h-full rounded-[20px]"
+              src={Japan}
+              alt="Best Way to Travel Japan"
+            />
+          </div>
           <div className="absolute left-8 md:left-10 bottom-10 md:bottom-[60px] text-white">
             <h3 className="font-normal text-4xl/4 mb-[15px]">Japan</h3>
             <ul className="list-disc pl-4">
@@ -39,12 +43,14 @@ const Memories: FC = (): JSX.Element => {
             </ul>
           </div>
         </div>
-        <div className="relative md:row-span-1 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
-          <img
-            className="object-cover w-full h-[327px] rounded-[20px]"
-            src={USA}
-            alt="Best Way to Travel French"
-          />
+        <div className="relative md:row-span-1 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] group overflow-hidden hover:xl:border-white transition-all duration-300">
+          <div className="relative w-full h-[327px] group-hover:xl:w-[calc(100%+40px)] group-hover:xl:h-[calc(100%+40px)] group-hover:xl:-m-5 transition-all duration-300">
+            <img
+              className="object-cover w-full h-full rounded-[20px]"
+              src={USA}
+              alt="Best Way to Travel USA"
+            />
+          </div>
           <div className="absolute left-8 md:left-10 bottom-10 md:bottom-[60px] text-white">
             <h3 className="font-normal text-4xl/4 mb-[15px]">USA</h3>
             <ul className="list-disc pl-4">
@@ -53,12 +59,14 @@ const Memories: FC = (): JSX.Element => {
             </ul>
           </div>
         </div>
-        <div className="relative md:row-span-1 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] ">
-          <img
-            className="object-cover w-full h-[327px] rounded-[20px]"
-            src={Ukraine}
-            alt="Best Way to Travel French"
-          />
+        <div className="relative md:row-span-1 md:col-span-1 xl:p-5 xl:border-[1px] xl:border-solid xl:border-auxiliary xl:rounded-[20px] group overflow-hidden hover:xl:border-white transition-all duration-300">
+          <div className="relative w-full h-[327px] group-hover:xl:w-[calc(100%+40px)] group-hover:xl:h-[calc(100%+40px)] group-hover:xl:-m-5 transition-all duration-300">
+            <img
+              className="object-cover w-full h-full rounded-[20px]"
+              src={Ukraine}
+              alt="Best Way to Travel Ukraine"
+            />
+          </div>
           <div className="absolute left-8 md:left-10 bottom-10 md:bottom-[60px] text-white">
             <h3 className="font-normal text-4xl/4 mb-[15px]">Ukraine</h3>
             <ul className="list-disc pl-4">

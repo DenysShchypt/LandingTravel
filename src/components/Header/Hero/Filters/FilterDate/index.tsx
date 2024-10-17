@@ -60,7 +60,7 @@ const FilterDate: FC<IFilterDateProps> = ({
         </svg>
       </button>
 
-      {isOpen &&isMdOrLarger&& (
+      {isOpen && isMdOrLarger && (
         <div
           ref={calendarRef}
           className="absolute w-[300px] bg-white border-slate-200 rounded-[20px] shadow-lg left-1/2 transform -translate-x-1/2 translate-y-[10px]"

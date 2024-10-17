@@ -22,7 +22,7 @@ const ContactUs: FC = (): JSX.Element => {
       </p>
       <button
         type="button"
-        className="flex justify-center mx-auto items-center w-[188px] h-[54px] px-[40px] py-[15px] border-[1px] border-solid border-white rounded-3xl font-medium text-xl text-white text-center"
+        className="flex justify-center mx-auto items-center w-[188px] h-[54px] px-[38px] py-[15px] border-[1px] border-solid border-white rounded-3xl font-medium text-xl text-white text-center hover:bg-white hover:text-[#003C82] transition-colors duration-300"
       >
         Contact Us
       </button>

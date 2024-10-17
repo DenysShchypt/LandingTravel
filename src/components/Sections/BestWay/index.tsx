@@ -30,7 +30,11 @@ const SectionBestWay: FC = (): JSX.Element => {
 
         <button
           type="button"
-          className="flex justify-center mb-[80px] xl:mb-0 mx-auto xl:mx-0 items-center w-[188px] h-[54px] px-[40px] py-[15px] border-[1px] border-solid border-auxiliary rounded-3xl font-medium text-xl text-auxiliary text-center"
+          className="flex justify-center mb-[80px] xl:mb-0 mx-auto xl:mx-0 items-center w-[188px] h-[54px] px-[38px] py-[15px] border-[1px] border-solid border-auxiliary rounded-3xl font-medium text-xl text-auxiliary text-center hover:bg-auxiliary hover:text-white transition-colors duration-300"
+          onClick={() => {
+            /* Add your contact logic here */
+          }}
+          aria-label="Contact Us"
         >
           Contact Us
         </button>

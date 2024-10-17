@@ -22,9 +22,7 @@ const Header: FC = (): JSX.Element => {
         className="pb-[80px] md:pb-[343px] pt-[60px] md:pt-[40px] w-full bg-#003C82 text-white flex"
         style={styles}
       >
-        <div
-         className="container"
-         >
+        <div className="container">
           <Navigate />
           <Hero />
         </div>

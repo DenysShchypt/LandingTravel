@@ -74,7 +74,7 @@ const FilterGuest: FC<IFilterGuestProps> = ({
         </svg>
       </button>
 
-      {isOpen && isMdOrLarger &&  (
+      {isOpen && isMdOrLarger && (
         <div
           ref={countRef}
           className="absolute w-[239px] bg-white border-slate-200 p-5 rounded-[20px] shadow-lg left-1/2 transform -translate-x-[95px] translate-y-[10px]"

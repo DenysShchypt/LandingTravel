@@ -8,12 +8,87 @@ import Ksenya from '../assets/happyClients/Ksenya.jpg'
 import Vanya from '../assets/happyClients/Vanya.jpg'
 import Arigbi from '../assets/happyClients/Arigbi.jpg'
 import Tony from '../assets/happyClients/Tony.jpg'
+import French from '../assets/experience/French.jpg'
+import Canada from '../assets/experience/Canada.jpg'
+import Greece from '../assets/experience/Greece.jpg'
+import Venice from '../assets/experience/Venice.jpg'
+import Italy from '../assets/experience/Italy.jpg'
+import Indonesia from '../assets/experience/Indonesia.jpg'
+import China from '../assets/experience/China.jpg'
+import Peru from '../assets/experience/Peru.jpg'
+import Africa from '../assets/experience/Africa.jpg'
 
 export const items = [
   { value: 'US', label: 'Greece' },
   { value: 'CA', label: 'Canada' },
   { value: 'FR', label: 'France' },
   { value: 'DE', label: 'Venice' },
+]
+
+export const countries = [
+  {
+    country: 'Greece',
+    img: Greece,
+    days: '14 days trip',
+    title: 'Greece',
+    price: 5100,
+  },
+  {
+    country: 'Canada',
+    img: Canada,
+    days: '10 days trip',
+    title: 'Banff National Park',
+    price: 3200,
+  },
+  {
+    country: 'France',
+    img: French,
+    days: '12 days trip',
+    title: 'Paris',
+    price: 4200,
+  },
+  {
+    country: 'Venice',
+    img: Venice,
+    days: '15 days trip',
+    title: 'Venice',
+    price: 6100,
+  },
+  {
+    country: 'Italy',
+    img: Italy,
+    days: '10 days trip',
+    title: 'Rome',
+    price: 3000,
+  },
+  {
+    country: 'Indonesia',
+    img: Indonesia,
+    days: '9 days trip',
+    title: 'Bali Province',
+    price: 2700,
+  },
+  {
+    country: 'China',
+    img: China,
+    days: '11 days trip',
+    title: 'Great Wall of China',
+    price: 2500,
+  },
+  {
+    country: 'Peru',
+    img: Peru,
+    days: '11 days trip',
+    title: 'Machu Picchu',
+    price: 4200,
+  },
+  {
+    country: 'Africa',
+    img: Africa,
+    days: '15 days trip',
+    title: 'Culture of Kenya',
+    price: 8000,
+  },
 ]
 
 export const clients = [
