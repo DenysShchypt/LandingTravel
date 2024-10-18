@@ -3,7 +3,10 @@ import SwipeExperience from '../../swiperExperience'
 
 const Experience: FC = (): JSX.Element => {
   return (
-    <section className=" pb-[150px] xl:pb-[300px] xl:pl-[220px] xl:flex xl:items-end">
+    <section
+      className=" pb-[150px] xl:pb-[300px] xl:pl-[220px] xl:flex xl:items-end"
+      id="trip"
+    >
       <div className="container xl:max-w-[456px] xl:mr-[40px] mb-[80px] xl:mb-0 xl:px-0">
         <h2 className=" mb-[60px] xl:mb-[80px] font-semibold text-4xl xl:text-6xl text-center xl:text-start text-black">
           Ultimate Travel Experience

@@ -5,6 +5,12 @@ import { openMobileSelector } from '../../../store/slice'
 const Navigate: FC = (): JSX.Element => {
   const dispatch = useAppDispatch()
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
   const handleOpenSelector = () => {
     dispatch(
       openMobileSelector({
@@ -13,6 +19,7 @@ const Navigate: FC = (): JSX.Element => {
       })
     )
   }
+
   return (
     <nav className="w-full flex justify-between mt-10 mb-24">
       <a
@@ -22,17 +29,41 @@ const Navigate: FC = (): JSX.Element => {
         Turistoe
       </a>
       <ul className="hidden md:flex items-center  text-white rounded-3xl border border-gray-300">
-        <li className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300">
-          About
+        <li
+          className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300"
+          onClick={() => scrollToSection('about')}
+        >
+          <button className="" type="button">
+            {' '}
+            About
+          </button>
         </li>
-        <li className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300">
-          Trip
+        <li
+          className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300"
+          onClick={() => scrollToSection('trip')}
+        >
+          <button className="" type="button">
+            {' '}
+            Trip
+          </button>
         </li>
-        <li className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300">
-          Blog
+        <li
+          className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300"
+          onClick={() => scrollToSection('blog')}
+        >
+          <button className="" type="button">
+            {' '}
+            Blog
+          </button>
         </li>
-        <li className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300">
-          Reviews
+        <li
+          className="text-sm font-normal cursor-pointer px-10 py-4 rounded-3xl hover:text-black hover:bg-gray-300"
+          onClick={() => scrollToSection('reviews')}
+        >
+          <button className="" type="button">
+            {' '}
+            Reviews
+          </button>
         </li>
       </ul>
       <button

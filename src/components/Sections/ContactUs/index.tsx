@@ -10,6 +10,7 @@ const ContactUs: FC = (): JSX.Element => {
     <section
       className="pt-[70px] xl:pt-[100px] pb-[100px] px-[30px] xl:px-[44px] text-white bg-cover bg-center"
       style={styles}
+      id="about"
     >
       <h2 className="mb-[60px] xl:mb-10 font-semibold text-3xl xl:text-6xl text-center">
         Let Us Show You the World

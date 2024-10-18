@@ -2,7 +2,10 @@ import { FC } from 'react'
 
 const SectionBestWay: FC = (): JSX.Element => {
   return (
-    <section className="container xl:flex pt-[100px] xl:pt-[289px] pb-[150px] xl:pb-[300px] ">
+    <section
+      className="container xl:flex pt-[100px] xl:pt-[289px] pb-[150px] xl:pb-[300px] "
+      id="blog"
+    >
       <div>
         <h2 className="mb-[60px] xl:mb-[80px] font-semibold text-3xl xl:text-6xl text-center xl:text-start text-black">
           Best Way to Travel
