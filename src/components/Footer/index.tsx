@@ -13,7 +13,7 @@ const Footer: FC = (): JSX.Element => {
             your life.
           </p>
           <ul className="flex justify-start gap-[30px] xl:gap-[15px]">
-            <li className="flex justify-center items-center w-10 h-10 rounded-full border-white border-[1px] border-solid ">
+            <li className="flex justify-center items-center w-10 h-10 rounded-full border-white border-[1px] border-solid">
               <svg className="fill-white" width="20" height="20">
                 <use href="./icons.svg#icon-inst"></use>
               </svg>
@@ -56,7 +56,8 @@ const Footer: FC = (): JSX.Element => {
             />
             <button
               type="submit"
-              className="px-[27px] py-[14px] bg-auxiliary rounded-[100px] font-medium text-white text-sm text-center"
+              className="px-[27px] py-[14px] bg-auxiliary rounded-[100px] font-medium text-white text-sm text-center 
+             border border-transparent hover:bg-white hover:text-auxiliary hover:border-auxiliary transition-all duration-300"
             >
               Subscribe
             </button>

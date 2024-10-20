@@ -42,12 +42,12 @@ const FilterDate: FC<IFilterDateProps> = ({
   }, [])
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <button
         type="button"
         ref={buttonRef}
         onClick={handleClick}
-        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[138px] py-5 md:py-2 text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center"
+        className="appearance-none  w-full font-medium px-5 md:m-0 text-xl md:w-[138px] py-5 md:py-2 text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center transition duration-300 hover:text-blue-600"
       >
         Date
         <svg

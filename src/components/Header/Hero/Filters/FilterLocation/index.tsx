@@ -34,12 +34,12 @@ const FilterLocation: FC<IFilterLocationProps> = ({
       <button
         type="button"
         {...getToggleButtonProps()}
-        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center
+        className="appearance-none w-full font-medium px-5 md:m-0 text-xl md:w-[170px] py-5 md:py-2  text-black bg-lightgray focus:outline-none focus:border-none flex items-center justify-between md:justify-center transition duration-300 hover:text-blue-600
         "
       >
         {selectedItem ? selectedItem.label : 'Location'}
         <svg
-          className=" stroke-black  ml-[220px] md:ml-2.5 stroke-1 fill-white transition-transform duration-300"
+          className=" stroke-black  ml-[220px] md:ml-2.5 stroke-1 fill-white transition-transform duration-300 "
           width="16"
           height="10"
           style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}

@@ -91,7 +91,7 @@ html,
 .custom-calendar .react-calendar__tile--active {
   background-color: #003c82 !important; /* Колір фону для вибраної дати */
   color: white !important; /* Колір тексту для вибраної дати */
-  border-radius: 40%; /* Робимо елемент круглим */
+  border-radius: 100%; /* Робимо елемент круглим */
   width: 24px; /* Задаємо ширину для дати */
 }
 

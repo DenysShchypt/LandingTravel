@@ -42,7 +42,7 @@ const Filters: FC = (): JSX.Element => {
 
   return (
     <form
-      className="mx-auto  md:flex  justify-end pb-6 md:py-1 md:pr-1 w-[353px] md:w-[549px] rounded-[20px] md:rounded-3xl border border-auxiliary bg-white"
+      className="mx-auto  md:flex  justify-end pb-6 md:py-1 md:pr-1 w-[353px] md:w-[549px] rounded-[20px] md:rounded-3xl border border-auxiliary bg-white hover:bg-gray-200"
       onSubmit={handleSubmit}
     >
       <FilterLocation
@@ -66,14 +66,14 @@ const Filters: FC = (): JSX.Element => {
         <span className="w-full md:w-0 h-[1px] md:h-0 md:rounded-0 bg-auxiliary"></span>
       </div>
       <button
-        className="flex justify-center items-center w-[310px] mx-auto md:m-0 py-[15px] md:py-0 px-10 md:px-0  md:w-12 md:h-12 border-[1px] md:border-0 border-auxiliary rounded-3xl md:rounded-full md:bg-auxiliary"
+        className="flex justify-center items-center w-[310px] mx-auto md:m-0 py-[15px] md:py-0 px-10 md:px-0  md:w-12 md:h-12 border-[1px] md:border-0 border-auxiliary rounded-3xl md:rounded-full md:bg-auxiliary "
         type="submit"
       >
         <span className="font-medium text-xl text-center text-auxiliary md:hidden">
           Search
         </span>
         <svg
-          className=" stroke-current fill-auxiliary stroke-1 hidden md:block"
+          className=" stroke-current  fill-transparent  stroke-1 hidden md:block "
           width="24"
           height="24"
         >
